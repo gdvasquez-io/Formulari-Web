@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <!-- incidencia.html
+         Daniel Vásquez
+         10/05/2026 -->
+
+  <title>Envia la teva incidència — NexoSystem</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="img/logo-nexosystem.png" alt="NexoSystem">
+      <div>
+        <div class="brand-name">NexoSystem</div>
+        <div class="brand-tag">Revolucionant la informàtica</div>
+      </div>
+    </div>
+    <div class="empresa-mini">
+      <p>NexoSystem · NIF B-65432198</p>
+      <p>C/ Diagonal 287, 08013 Barcelona</p>
+      <p>+34 931 234 567 · nexosystem@gmail.com</p>
+    </div>
+  </header>
+  <!-- He consultado esta página como ayuda para la estructura y algunos códigos: GeeksforGeeks. -->
+
+  <main>
+    <section class="hero-thonik">
+      <h1>incidència</h1>
+    </section>
+
+    <section class="bloc">
+      <h2>Envia la teva incidència</h2>
+      <p>Omple el formulari i un tècnic et contactarà en menys d'1 hora.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Dades del client</legend>
+          <label for="nom">Nom i cognoms *</label>
+          <input type="text" id="nom" name="nom" required>
+          <label for="email">Correu electrònic *</label>
+          <input type="email" id="email" name="email" required>
+          <label for="telefon">Telèfon de contacte *</label>
+          <input type="tel" id="telefon" name="telefon" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Identificació de l'equip</legend>
+          <label for="tipus">Tipus d'equip *</label>
+          <select id="tipus" name="tipus" required>
+            <option value="">-- Selecciona --</option>
+            <option>Sobretaula</option>
+            <option>Portàtil</option>
+            <option>Servidor</option>
+            <option>Tauleta</option>
+            <option>Altres</option>
+          </select>
+          <label for="so">Sistema operatiu *</label>
+          <select id="so" name="so" required>
+            <option value="">-- Selecciona --</option>
+            <option>Windows 10</option>
+            <option>Windows 11</option>
+            <option>macOS</option>
+            <option>Linux (Ubuntu/Debian)</option>
+            <option>Altres</option>
+          </select>
+          <label for="marca">Marca i model</label>
+          <input type="text" id="marca" name="marca" placeholder="ex: HP Pavilion 15">
+        </fieldset>
+
+        <fieldset>
+          <legend>Components afectats (Selecció múltiple)</legend>
+          <p class="help-text">
+            Selecciona els components que creus que estan fallant:
+          </p>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="component" value="disc-dur"> Disc dur</label>
+            <label><input type="checkbox" name="component" value="ram"> Memòria RAM</label>
+            <label><input type="checkbox" name="component" value="cpu"> CPU</label>
+            <label><input type="checkbox" name="component" value="placa"> Placa base</label>
+            <label><input type="checkbox" name="component" value="font"> Font d'alimentació</label>
+            <label><input type="checkbox" name="component" value="grafica"> Targeta gràfica</label>
+            <label><input type="checkbox" name="component" value="no-ho-se"> No ho sé</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tipus de problema</legend>
+          <p class="help-text">
+            No cal que sàpigues què falla. Marca el que millor descrigui el que et passa:
+          </p>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="problema" value="no-encen"> No s'encén</label>
+            <label><input type="checkbox" name="problema" value="lent"> Va molt lent</label>
+            <label><input type="checkbox" name="problema" value="apaga"> S'apaga sol</label>
+            <label><input type="checkbox" name="problema" value="pantalla"> Problemes amb la pantalla</label>
+            <label><input type="checkbox" name="problema" value="soroll"> Fa soroll estrany</label>
+            <label><input type="checkbox" name="problema" value="internet"> No es connecta a internet / WiFi</label>
+            <label><input type="checkbox" name="problema" value="virus"> Sospito que té virus</label>
+            <label><input type="checkbox" name="problema" value="dades"> He perdut arxius o dades</label>
+            <label><input type="checkbox" name="problema" value="altres"> Altres / no ho sé</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Descripció de l'avaria</legend>
+          <label for="simptomes">Símptomes (què fa l'equip?) *</label>
+          <textarea id="simptomes" name="simptomes" required
+            placeholder="ex: s'apaga sol després de 5 minuts..."></textarea>
+          <label for="senyals">Senyals acústics o missatges d'error</label>
+          <textarea id="senyals" name="senyals" placeholder="ex: 3 beeps llargs / pantalla blava 0x000007B"></textarea>
+          <label for="darrera">Darrera acció abans de l'error</label>
+          <textarea id="darrera" name="darrera" placeholder="ex: actualització de Windows..."></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Urgència *</legend>
+          <div class="radio-group">
+            <label><input type="radio" name="urgencia" value="baixa" required> Baixa</label>
+            <label><input type="radio" name="urgencia" value="mitjana"> Mitjana</label>
+            <label><input type="radio" name="urgencia" value="alta"> Alta (Crítica)</label>
+          </div>
+        </fieldset>
+
+        <div class="checkbox-group" style="margin-top: 10px; margin-bottom: 10px;">
+          <label><input type="checkbox" name="privacitat" required> Accepto la <a href="privacitat.html" style="text-decoration: underline;">política de privacitat</a> abans d'enviar el formulari *</label>
+        </div>
+
+        <button type="submit">Enviar incidència</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="xarxes"><a href="javascript:void(0);">Facebook</a> · <a href="javascript:void(0);">Twitter</a> · <a href="javascript:void(0);">Instagram</a></div>
+    <p>Horari: Dl-Dv 9:00-19:00 · Ds 10:00-14:00</p>
+    <div class="legal"><a href="privacitat.html">Política de Privacitat</a> · <a href="avis-legal.html">Avís Legal</a></div>
+
+  </footer>
+
+  <!-- He consultado la pagina de navbar gallery como idea para el menú desplegable y youtube para consultar códigos. Se ha extraído parte del código del menú desplegable de la pagina como idea y ayuda. -->
+  <div class="disc-menu">
+    <a href="incidencia.html" class="disc d5"><span>Incidència</span></a>
+    <a href="contacte.html" class="disc d4"><span>Contacte</span></a>
+    <a href="qui-som.html" class="disc d3"><span>Qui som</span></a>
+    <a href="tarifes.html" class="disc d2"><span>Tarifes</span></a>
+    <a href="index.html" class="disc d1"><span>Inici</span></a>
+    <label for="menu-toggle" class="target-btn" aria-label="Menú">
+      <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span><span
+        class="ring r4"></span>
+      <span class="target-label menu-open">menú</span>
+    </label>
+  </div>
+  <!-- He consultado la pagina de Codepen como ayuda para el código del cursor. -->
+  <script src="js/cursor.js"></script>
+</body>
+
+</html>

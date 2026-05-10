@@ -1,0 +1,622 @@
+/* He utilizado las páginas W3Schools y GeeksforGeeks como ayuda para el diseño. */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html,
+body {
+  background: #1a1a1a;
+  color: #f2f2f2;
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.55;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+  padding-bottom: 160px;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+.top-banner {
+  display: block;
+  width: 100%;
+  background: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.top-banner img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.portada-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 50px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  max-width: 1000px;
+}
+
+.portada-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  background: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.brand img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  background: linear-gradient(90deg, #cfcfcf, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand-tag {
+  font-size: 10px;
+  color: #a8a8a8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.empresa-mini {
+  font-size: 12px;
+  color: #a8a8a8;
+  text-align: right;
+}
+
+.empresa-mini p {
+  margin: 2px 0;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 24px;
+}
+
+.hero-thonik {
+  padding: 40px 0 30px;
+}
+
+.hero-thonik h1 {
+  font-size: clamp(44px, 8.5vw, 120px);
+  line-height: .95;
+  letter-spacing: -3px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #cfcfcf, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+
+.bloc,
+section.bloc {
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 28px;
+}
+
+.bloc h2,
+section.bloc h2 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  margin-bottom: 14px;
+  display: inline-block;
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 6px;
+}
+
+.bloc h3 {
+  margin-top: 18px;
+  color: #cfcfcf;
+  font-size: 18px;
+}
+
+.bloc p,
+.bloc li {
+  color: #f2f2f2;
+}
+
+.bloc ul {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+.icones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.icones>div {
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  transition: transform .25s, border-color .25s;
+}
+
+.icones>div:hover {
+  transform: translateY(-4px);
+  border-color: #ffffff;
+}
+
+.icones img {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 12px;
+  object-fit: contain;
+}
+
+.icones h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #f2f2f2;
+}
+
+.icones p {
+  font-size: 13px;
+  color: #a8a8a8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+th,
+td {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #232323;
+  color: #cfcfcf;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+tr:nth-child(even) td {
+  background: #333333;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 18px;
+  border-radius: 12px;
+  background: #333333;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 8px;
+  color: #cfcfcf;
+}
+
+label {
+  display: block;
+  margin: 8px 0 4px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #a8a8a8;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 11px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f2f2f2;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ffffff;
+}
+
+select option {
+  color: #000;
+  background: #fff;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: inline-block;
+  margin-right: 14px;
+  font-weight: normal;
+  color: #f2f2f2;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #3a3a3a, #777);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 14px 30px;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  width: fit-content;
+  transition: transform .2s, box-shadow .2s;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px #ffffff;
+}
+
+.contacte-info p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #f2f2f2;
+}
+
+.contacte-info strong {
+  color: #cfcfcf;
+}
+
+footer {
+  width: 100%;
+  background: #232323;
+  margin: 40px 0 0 0;
+  padding: 40px 24px 80px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #a8a8a8;
+  font-size: 13px;
+}
+
+footer .xarxes a {
+  color: #cfcfcf;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer .legal {
+  margin-top: 14px;
+  font-size: 12px;
+}
+
+footer .legal a {
+  color: #a8a8a8;
+  margin: 0 8px;
+}
+
+
+
+
+/* He consultado la página de Navbar Gallery como idea para el menú desplegable y youtube para consultar códigos. Se ha extraído parte del código del menú desplegable de la pagina como ayuda. */
+.menu-toggle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.disc-menu {
+  position: fixed;
+  left: 50%;
+  bottom: 120px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  z-index: 200;
+}
+
+.target-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  z-index: 50;
+  box-shadow: 0 10px 40px rgba(30, 60, 30, .18), 0 0 0 1px rgba(30, 60, 30, .04) inset;
+  display: block;
+}
+
+.target-btn .ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.target-btn .r1 {
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.target-btn .r2 {
+  width: 30px;
+  height: 30px;
+}
+
+.target-btn .r3 {
+  width: 50px;
+  height: 50px;
+}
+
+.target-btn .r4 {
+  width: 70px;
+  height: 70px;
+}
+
+
+
+.target-btn .target-label {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 10px);
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  background: #232323;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+}
+
+.menu-close {
+  display: none;
+}
+
+.disc {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%) scale(0);
+  transform-origin: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 18px;
+  pointer-events: none;
+  transition: transform .55s cubic-bezier(.5, 1.55, .45, 1), opacity .4s;
+  opacity: 0;
+  backdrop-filter: blur(6px);
+}
+
+.disc span {
+  padding: 6px 14px;
+}
+
+.d1 {
+  width: 220px;
+  height: 220px;
+  z-index: 25;
+  background: #000000;
+  color: #ffffff;
+}
+
+.d2 {
+  width: 350px;
+  height: 350px;
+  z-index: 20;
+  background: #ffffff;
+  color: #000000;
+}
+
+.d3 {
+  width: 480px;
+  height: 480px;
+  z-index: 15;
+  background: #000000;
+  color: #ffffff;
+}
+
+.d4 {
+  width: 610px;
+  height: 610px;
+  z-index: 10;
+  background: #ffffff;
+  color: #000000;
+}
+
+.d5 {
+  width: 740px;
+  height: 740px;
+  z-index: 5;
+  background: #000000;
+  color: #ffffff;
+}
+
+.menu-toggle:checked~.disc-menu .disc {
+  transform: translate(-50%, 50%) scale(1);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.menu-toggle:checked~.disc-menu .disc:hover {
+  transform: translate(-50%, 50%) scale(1.08);
+}
+
+.menu-toggle:checked~.disc-menu .d1 {
+  transition-delay: .05s;
+}
+
+.menu-toggle:checked~.disc-menu .d2 {
+  transition-delay: .14s;
+}
+
+.menu-toggle:checked~.disc-menu .d3 {
+  transition-delay: .23s;
+}
+
+.menu-toggle:checked~.disc-menu .d4 {
+  transition-delay: .32s;
+}
+
+.menu-toggle:checked~.disc-menu .d5 {
+  transition-delay: .41s;
+}
+
+
+
+
+
+
+/* He consultado la página de Codepen como ayuda para el código del cursor. */
+* {
+  cursor: none !important;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, .85);
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(255, 255, 255, .55);
+  background: rgba(255, 255, 255, .04);
+  box-shadow: 0 0 24px rgba(255, 255, 255, .18);
+}
+
+/* Helper classes to remove inline HTML styles */
+.hero-subtitle {
+  color: #a8a8a8;
+  max-width: 600px;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+.help-text {
+  font-size: 13px;
+  color: #a8a8a8;
+  margin-bottom: 8px;
+}
+
+footer p {
+  margin-top: 12px;
+}
+
+footer .copyright {
+  font-size: 11px;
+}
